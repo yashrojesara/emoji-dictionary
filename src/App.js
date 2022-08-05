@@ -1,5 +1,13 @@
+import EmojiSearchComponent from "./Components/EmojiSearchComponent";
+import Header from "./Components/Header";
+
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <Header />
+      <EmojiSearchComponent />
+    </>
+  );
 }
 
 export default App;
