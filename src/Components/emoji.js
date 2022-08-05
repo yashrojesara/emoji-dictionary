@@ -44,10 +44,6 @@ export const emojiList = [
     emoji: "🤦",
   },
   {
-    name: "thumbsdown",
-    emoji: "👎",
-  },
-  {
     name: "clap",
     emoji: "👏",
   },
@@ -55,18 +51,9 @@ export const emojiList = [
     name: "ok",
     emoji: "👌",
   },
-
-  {
-    name: "kiss",
-    emoji: "😘",
-  },
   {
     name: "kissing",
     emoji: "😗",
-  },
-  {
-    name: "kissingheart",
-    emoji: "😚",
   },
   {
     name: "zany",
