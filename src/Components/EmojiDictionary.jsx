@@ -3,7 +3,7 @@ import React from "react";
 import { emojiList } from "./emoji";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "2em",
     display: "flex",
@@ -16,8 +16,11 @@ const useStyles = makeStyles({
     flexFlow: "wrap",
     maxWidth: "60%",
     height: "100%",
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "95%",
+    },
   },
-});
+}));
 
 function EmojiDictionary(props) {
   const { setSearchValue } = props;

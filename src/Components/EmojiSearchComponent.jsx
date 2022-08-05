@@ -8,7 +8,6 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: "2em",
     flexDirection: "column",
     alignItems: "center",
   },
