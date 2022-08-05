@@ -2,8 +2,20 @@ import { Typography, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { emojiList } from "./emoji";
 import EmojiDictionary from "./EmojiDictionary";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "2em",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+});
 
 function EmojiSearchComponent() {
+  const classes = useStyles();
   const [emoji, setEmoji] = useState("");
   const [searchValue, setSearchValue] = React.useState("");
 
@@ -28,15 +40,7 @@ function EmojiSearchComponent() {
   }, [emoji]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "2em",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div className={classes.root}>
       <TextField
         value={emoji}
         onChange={onChange}
@@ -50,10 +54,10 @@ function EmojiSearchComponent() {
           fontWeight: "bold",
         }}
       >
-        {searchValue ? searchValue : "Translation will appear here"}
+        {searchValue}
       </Typography>
 
-      <EmojiDictionary />
+      <EmojiDictionary setSearchValue={setSearchValue} />
     </div>
   );
 }
